@@ -51,7 +51,6 @@ async def mass_translate_english(data: Any = Body(...)):
 @app.post("/save_product/")
 async def save_product(data: ProductModel):
     try:
-        # Записываем основной продукт и получаем его product_id
         product_query = """
         INSERT INTO products (description)
         VALUES ($1)
@@ -65,7 +64,6 @@ async def save_product(data: ProductModel):
 
         logger.info(f"Product ID: {product_id}")
 
-        # Записываем переводы имен
         for lang_code, name in data.names.items():
             name_query = """
             INSERT INTO product_names (product_id, lang_code, name)
