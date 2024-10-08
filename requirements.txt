@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+gunicorn
+psycopg2-binary
+sqlalchemy
+requests
+langdetect
+asyncpg
+aiohttp
