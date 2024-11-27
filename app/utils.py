@@ -5,8 +5,6 @@ import aiohttp
 
 logger = logging.getLogger(__name__)
 
-YANDEX_API_KEY = 'AQVNzbs__XJFQV3w3Ev077ozVA7xD8m24W-KXFiQ'
-YANDEX_TRANSLATE_URL = 'https://translate.api.cloud.yandex.net/translate/v2/translate'
 MAX_REQUESTS_PER_SECOND = 20
 semaphore = asyncio.Semaphore(MAX_REQUESTS_PER_SECOND)
 
